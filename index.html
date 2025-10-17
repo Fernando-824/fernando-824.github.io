@@ -26,53 +26,39 @@
         <section class="proyectos">
             <h2>Proyectos</h2>
 
-            <div class="acordeon">
-                <button class="acordeon-btn">FPS Multijugador (2025)<span class="icono">+</span></button>
-                <div class="acordeon-contenido">
-                    <p></p>
-                </div>
+            <div class="acordeon acordeon-naranja">
+                <button class="acordeon-btn">Project Paintball (2025)<span class="icono">+</span></button>
+                <div class="acordeon-contenido"><p></p></div>
             </div>
 
-            <div class="acordeon">
+            <div class="acordeon acordeon-morado">
                 <button class="acordeon-btn">Implementación de K-Means (2025)<span class="icono">+</span></button>
-                <div class="acordeon-contenido">
-                    <p></p>
-                </div>
+                <div class="acordeon-contenido"><p></p></div>
             </div>
 
-            <div class="acordeon">
+            <div class="acordeon acordeon-arduino">
                 <button class="acordeon-btn">Juego con Arduino (2024)<span class="icono">+</span></button>
-                <div class="acordeon-contenido">
-                    <p></p>
-                </div>
+                <div class="acordeon-contenido"><p></p></div>
             </div>
 
-            <div class="acordeon">
-                <button class="acordeon-btn">Aplicaciones móviles (2024)<span class="icono">+</span></button>
-                <div class="acordeon-contenido">
-                    <p></p>
-                </div>
+            <div class="acordeon acordeon-rosa">
+                <button class="acordeon-btn">Desarrollo de Aplicaciones para Móviles (2024)<span class="icono">+</span></button>
+                <div class="acordeon-contenido"><p></p></div>
             </div>
 
-            <div class="acordeon">
-                <button class="acordeon-btn">Escenario y personaje 3D con animaciones (2024)<span class="icono">+</span></button>
-                <div class="acordeon-contenido">
-                    <p></p>
-                </div>
+            <div class="acordeon acordeon-verde">
+                <button class="acordeon-btn">Escenario y Personaje 3D con Animaciones (2024)<span class="icono">+</span></button>
+                <div class="acordeon-contenido"><p></p></div>
             </div>
 
-            <div class="acordeon">
+            <div class="acordeon acordeon-gris-oscuro">
                 <button class="acordeon-btn">Demo 2D en Unity (2023)<span class="icono">+</span></button>
-                <div class="acordeon-contenido">
-                    <p></p>
-                </div>
+                <div class="acordeon-contenido"><p></p></div>
             </div>
 
-            <div class="acordeon">
-                <button class="acordeon-btn">Juego de POO con C++ (2023)<span class="icono">+</span></button>
-                <div class="acordeon-contenido">
-                    <p></p>
-                </div>
+            <div class="acordeon acordeon-azul">
+                <button class="acordeon-btn">Proyecto de Programación Orientada a Objetos con C++ (2023)<span class="icono">+</span></button>
+                <div class="acordeon-contenido"><p></p></div>
             </div>
         </section>
 
@@ -97,16 +83,13 @@
                 const contenido = boton.nextElementSibling;
                 const icono = boton.querySelector(".icono");
 
-                // Si ya está abierto, lo cerramos
                 if (contenido.classList.contains("activo")) {
                     contenido.classList.remove("activo");
                     icono.textContent = "+";
                 } else {
-                    // Cerrar los demás
                     document.querySelectorAll(".acordeon-contenido").forEach(c => c.classList.remove("activo"));
                     document.querySelectorAll(".icono").forEach(i => i.textContent = "+");
 
-                    // Abrir el actual
                     contenido.classList.add("activo");
                     icono.textContent = "−";
                 }

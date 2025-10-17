@@ -1,11 +1,4 @@
-﻿/* 🎨 PALETA DE COLORES
-   Azul oscuro: #0a2540
-   Azul intermedio: #133b63
-   Naranja claro (acento): #ffb347
-   Fondo claro: #f7f9fc
-*/
-
-/* Estilos generales */
+﻿/* Estilos generales */
 body {
     font-family: "Segoe UI", Roboto, sans-serif;
     margin: 0;
@@ -15,9 +8,8 @@ body {
     line-height: 1.6;
 }
 
-/* Cabecera */
 header {
-    background: linear-gradient(135deg, #0a2540, #133b63);
+    background: #0a2540;
     color: white;
     text-align: center;
     padding: 3rem 1rem;
@@ -26,7 +18,7 @@ header {
     header h1 {
         font-size: 2.5rem;
         margin-bottom: 0.5rem;
-        color: #ffb347;
+        color: white;
     }
 
 .subtitle {
@@ -34,29 +26,27 @@ header {
     opacity: 0.85;
 }
 
-/* Contenido principal */
 main {
     max-width: 800px;
     margin: 2rem auto;
     padding: 0 1.5rem;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 
 h2 {
     color: #0a2540;
-    border-bottom: 2px solid #ffb347;
+    border-bottom: 2px solid #0a2540;
     padding-bottom: 0.3rem;
 }
 
-/* Sección de introducción */
 .intro p {
     margin-top: 1rem;
     font-size: 1.1rem;
+    color: #0a2540;
 }
 
-/* Contacto */
 .contacto ul {
     list-style: none;
     padding: 0;
@@ -74,11 +64,10 @@ h2 {
 }
 
     .contacto a:hover {
-        color: #ff8c00;
+        color: #e67300;
         text-decoration: underline;
     }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 1rem;
@@ -89,25 +78,21 @@ footer {
     opacity: 0.85;
 }
 
-/* --- SECCIONES EXTENSIBLES (con animación suave) --- */
+/* --- SECCIONES EXTENSIBLES --- */
 .acordeon {
     margin: 1rem 0;
-    border: 1px solid #d0d8e0;
     border-radius: 8px;
     overflow: hidden;
-    background: #fdfdfd;
     transition: box-shadow 0.3s;
 }
 
     .acordeon:hover {
-        box-shadow: 0 3px 8px rgba(19, 59, 99, 0.15);
+        box-shadow: 0 3px 8px rgba(0,0,0,0.25);
     }
 
 .acordeon-btn {
     width: 100%;
     text-align: left;
-    background: #133b63;
-    color: white;
     border: none;
     padding: 1rem;
     font-size: 1.1rem;
@@ -117,30 +102,84 @@ footer {
     justify-content: space-between;
     align-items: center;
     transition: background 0.2s;
+    color: white;
 }
 
-    .acordeon-btn:hover {
-        background: #184a7e;
-    }
-
-/* 🔽 Animación de apertura/cierre */
+/* Animación apertura/cierre */
 .acordeon-contenido {
     max-height: 0;
     overflow: hidden;
-    background: #ffffff;
+    background: white;
     color: #0a2540;
-    border-top: 2px solid #ffb347;
+    border-top: 2px solid white;
     transition: max-height 0.4s ease, padding 0.3s ease;
     padding: 0 1rem;
 }
 
     .acordeon-contenido.activo {
-        max-height: 400px; /* altura máxima visible */
+        max-height: 400px;
         padding: 1rem;
     }
 
 .icono {
     font-weight: bold;
     font-size: 1.3rem;
-    color: #ffb347;
+    color: white;
 }
+
+/* --- COLORES INDIVIDUALES POR PROYECTO --- */
+.acordeon-naranja .acordeon-btn {
+    background: #e67300;
+}
+
+    .acordeon-naranja .acordeon-btn:hover {
+        background: #ff9f40;
+    }
+
+.acordeon-morado .acordeon-btn {
+    background: #4b0082;
+}
+    /* color bash de Linux */
+    .acordeon-morado .acordeon-btn:hover {
+        background: #6a0dad;
+    }
+
+.acordeon-arduino .acordeon-btn {
+    background: #005f73;
+}
+    /* azul Arduino */
+    .acordeon-arduino .acordeon-btn:hover {
+        background: #0a9396;
+    }
+
+.acordeon-rosa .acordeon-btn {
+    background: #d6336c;
+}
+    /* rojo tirando a rosa */
+    .acordeon-rosa .acordeon-btn:hover {
+        background: #e94e8c;
+    }
+
+.acordeon-verde .acordeon-btn {
+    background: #2e8b57;
+}
+    /* verde 3D */
+    .acordeon-verde .acordeon-btn:hover {
+        background: #3ba76e;
+    }
+
+.acordeon-gris-oscuro .acordeon-btn {
+    background: #2f2f2f;
+}
+    /* negro/gris oscuro Unity 2D */
+    .acordeon-gris-oscuro .acordeon-btn:hover {
+        background: #444;
+    }
+
+.acordeon-azul .acordeon-btn {
+    background: #1e3a8a;
+}
+    /* azul para programación */
+    .acordeon-azul .acordeon-btn:hover {
+        background: #3b5dc9;
+    }

@@ -77,3 +77,48 @@ footer {
     font-size: 0.9rem;
     opacity: 0.8;
 }
+
+/* --- SECCIONES EXTENSIBLES --- */
+.acordeon {
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fafafa;
+}
+
+.acordeon-btn {
+    width: 100%;
+    text-align: left;
+    background: #1e1e2f;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+    .acordeon-btn:hover {
+        background: #2c2c4a;
+    }
+
+.acordeon-contenido {
+    display: none;
+    padding: 1rem;
+    background: white;
+    color: #333;
+}
+
+    .acordeon-contenido.activo {
+        display: block;
+    }
+
+.icono {
+    font-weight: bold;
+    font-size: 1.3rem;
+}

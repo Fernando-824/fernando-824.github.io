@@ -117,7 +117,7 @@ footer {
 }
 
     .acordeon-contenido.activo {
-        max-height: 400px;
+        max-height: 600px;
         padding: 1rem;
     }
 
@@ -182,4 +182,28 @@ footer {
     /* azul para programación */
     .acordeon-azul .acordeon-btn:hover {
         background: #3b5dc9;
+    }
+
+/* Contenedor flex para acordeón */
+.acordeon-flex {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Para que en pantallas pequeñas se apile */
+}
+
+/* Columna de texto */
+.acordeon-texto {
+    flex: 1 1 300px; /* Crece, pero mínimo 300px */
+}
+
+/* Columna de imagen */
+.acordeon-imagen {
+    flex: 1 1 250px;
+}
+
+    .acordeon-imagen img {
+        max-width: 100%;
+        border-radius: 8px;
+        display: block;
     }

@@ -184,12 +184,41 @@ footer {
         background: #3b5dc9;
     }
 
-/* Contenedor flex para acordeón */
+/* --- COLORES INDIVIDUALES POR PROYECTO --- */
+
+/* Project Paintball - naranja */
+.acordeon-naranja .acordeon-btn {
+    background: #e67300;
+}
+
+    .acordeon-naranja .acordeon-btn:hover {
+        background: #ff9f40;
+    }
+
+/* Arduino - azul */
+.acordeon-arduino .acordeon-btn {
+    background: #005f73; /* azul Arduino */
+}
+
+    .acordeon-arduino .acordeon-btn:hover {
+        background: #0a9396;
+    }
+
+/* --- FLEX Y CONTENIDO --- */
+
+/* Contenedor flex horizontal (Project Paintball u otros) */
 .acordeon-flex {
     display: flex;
     gap: 1.5rem;
     align-items: flex-start;
     flex-wrap: wrap; /* Para que en pantallas pequeñas se apile */
+}
+
+/* Contenedor flex vertical (Arduino con varias imágenes) */
+.acordeon-flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 /* Columna de texto */
@@ -206,4 +235,41 @@ footer {
         max-width: 100%;
         border-radius: 8px;
         display: block;
+    }
+
+/* Contenedor de imágenes horizontales (Arduino) */
+.acordeon-imagenes {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; /* Para que en pantallas pequeñas se apilen */
+    justify-content: center;
+}
+
+    .acordeon-imagenes img {
+        max-width: 30%; /* Tres imágenes en fila grande */
+        border-radius: 8px;
+        display: block;
+    }
+
+/* Ajuste responsivo para pantallas pequeñas */
+@media (max-width: 600px) {
+    .acordeon-imagenes img {
+        max-width: 100%; /* Se apilan verticalmente */
+    }
+}
+
+/* --- ANIMACIÓN APERTURA/CIERRE --- */
+.acordeon-contenido {
+    max-height: 0;
+    overflow: hidden;
+    background: white;
+    color: #0a2540;
+    border-top: 2px solid white;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 1rem;
+}
+
+    .acordeon-contenido.activo {
+        max-height: 2000px; /* altura suficientemente grande para cualquier contenido */
+        padding: 1rem;
     }

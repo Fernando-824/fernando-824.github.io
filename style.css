@@ -116,11 +116,6 @@ footer {
     padding: 0 1rem;
 }
 
-    .acordeon-contenido.activo {
-        max-height: 600px;
-        padding: 1rem;
-    }
-
 .icono {
     font-weight: bold;
     font-size: 1.3rem;
@@ -129,80 +124,61 @@ footer {
 
 /* --- COLORES INDIVIDUALES POR PROYECTO --- */
 .acordeon-naranja .acordeon-btn {
-    background: #e67300;
+    background: #f97316; /* Project Paintball */
 }
 
     .acordeon-naranja .acordeon-btn:hover {
-        background: #ff9f40;
+        background: #fb923c;
     }
 
 .acordeon-morado .acordeon-btn {
-    background: #4b0082;
+    background: #7c3aed; /* POO C++ */
 }
-    /* color bash de Linux */
+
     .acordeon-morado .acordeon-btn:hover {
-        background: #6a0dad;
+        background: #8b5cf6;
     }
 
 .acordeon-arduino .acordeon-btn {
-    background: #005f73;
+    background: #0284c7; /* Arduino NFC - más oscuro */
 }
-    /* azul Arduino */
-    .acordeon-arduino .acordeon-btn:hover {
-        background: #0a9396;
-    }
 
-.acordeon-rosa .acordeon-btn {
-    background: #d6336c;
-}
-    /* rojo tirando a rosa */
-    .acordeon-rosa .acordeon-btn:hover {
-        background: #e94e8c;
+    .acordeon-arduino .acordeon-btn:hover {
+        background: #0ea5e9;
     }
 
 .acordeon-verde .acordeon-btn {
-    background: #2e8b57;
+    background: #10b981; /* Escenario y Personaje 3D */
 }
-    /* verde 3D */
+
     .acordeon-verde .acordeon-btn:hover {
-        background: #3ba76e;
+        background: #34d399;
     }
 
 .acordeon-gris-oscuro .acordeon-btn {
-    background: #2f2f2f;
+    background: #374151; /* Demo 2D */
 }
-    /* negro/gris oscuro Unity 2D */
+
     .acordeon-gris-oscuro .acordeon-btn:hover {
-        background: #444;
+        background: #4b5563;
     }
 
 .acordeon-azul .acordeon-btn {
-    background: #1e3a8a;
+    background: #1e3a8a; /* Optimización Render / HPC */
 }
-    /* azul para programación */
+
     .acordeon-azul .acordeon-btn:hover {
-        background: #3b5dc9;
+        background: #3b82f6;
     }
 
-/* --- COLORES INDIVIDUALES POR PROYECTO --- */
-
-/* Project Paintball - naranja */
-.acordeon-naranja .acordeon-btn {
-    background: #e67300;
+.acordeon-morado-claro .acordeon-btn {
+    background: #2563eb; /* K-Means HPC */
 }
 
-    .acordeon-naranja .acordeon-btn:hover {
-        background: #ff9f40;
+    .acordeon-morado-claro .acordeon-btn:hover {
+        background: #3b82f6;
     }
 
-/* Arduino - azul */
-.acordeon-arduino .acordeon-btn {
-    background: #005f73; /* azul Arduino */
-}
-
-    .acordeon-arduino .acordeon-btn:hover {
-        background: #0a9396;
-    }
 
 /* --- FLEX Y CONTENIDO --- */
 
@@ -275,3 +251,15 @@ footer {
     }
 
 
+.acordeon-imagen-centro {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+    .acordeon-imagen-centro img {
+        width: 80%;
+        max-width: 700px;
+        border-radius: 10px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    }

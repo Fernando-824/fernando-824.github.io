@@ -96,25 +96,11 @@
             </div>
 
 
-            <div class="acordeon acordeon-rosa">
-                <button class="acordeon-btn">Desarrollo de Aplicaciones para Móviles (2024)<span class="icono">+</span></button>
-                <div class="acordeon-contenido"><p></p></div>
-            </div>
-
-            <div class="acordeon acordeon-verde">
-                <button class="acordeon-btn">Escenario y Personaje 3D con Animaciones (2024)<span class="icono">+</span></button>
-                <div class="acordeon-contenido"><p></p></div>
-            </div>
-
-            <div class="acordeon acordeon-gris-oscuro">
-                <button class="acordeon-btn">Demo 2D en Unity (2023)<span class="icono">+</span></button>
-                <div class="acordeon-contenido"><p></p></div>
-            </div>
 
             <div class="acordeon acordeon-morado">
                 <button class="acordeon-btn">Implementación de K-Means (2025)<span class="icono">+</span></button>
                 <div class="acordeon-contenido">
-                    <div class="acordeon-flex">
+                    <div class="acordeon-flex-column">
                         <div class="acordeon-texto">
                             <p>
                                 <strong>Descripción:</strong> Implementación del algoritmo K-Means en C++ con paralelización combinando OpenMPI y OpenMP.
@@ -123,8 +109,101 @@
                                 De esta manera, se optimizó el tiempo de ejecución y
                                 se aprovechó al máximo la memoria distribuida y compartida.
                             </p>
+
+                            <p>
+                                El mejor rendimiento se obtuvo con dos procesadores activos,
+                                ya que a partir de tres la comunicación entre nodos (con MPI)
+                                comenzaba a introducir más sobrecarga que el propio cálculo del algoritmo.
+                            </p>
+                        </div>
+
+                        <div class="acordeon-imagen">
+                            <img src="images/KMeansGraph.png" alt="Comparativa de tiempos con distintos procesadores">
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="acordeon acordeon-gris-oscuro">
+                <button class="acordeon-btn">Optimización del Renderizado de una Imagen con HPC (2025)<span class="icono">+</span></button>
+                <div class="acordeon-contenido">
+                    <div class="acordeon-flex-column">
+                        <!-- Descripción -->
+                        <div class="acordeon-texto">
+                            <p>
+                                Proyecto centrado en la <strong>aceleración del renderizado de una imagen</strong> mediante diferentes modelos de paralelización:
+                                <strong>OpenMP</strong> (paralelismo por hilos), <strong>OpenMPI</strong> (paralelismo distribuido entre nodos)
+                                y <strong>CUDA</strong> (procesamiento masivo en GPU).
+                            </p>
+
+                            <p>
+                                El objetivo fue comparar el rendimiento de cada enfoque, evaluando el tiempo de ejecución y el aprovechamiento de recursos
+                                al aplicar un algoritmo de trazado de rayos sobre una imagen de alta resolución (1200x800).
+                            </p>
+
+                            <p>
+                                A partir de una versión base secuencial del renderizado, se adaptó el código a cada tecnología.
+                                Para OpenMP, se utilizó la paralelización por bloques de píxeles;
+                                para OpenMPI, se distribuyeron las regiones de la imagen entre distintos nodos de cálculo;
+                                y en CUDA, se asignó cada píxel a un hilo de ejecución en la GPU.
+                            </p>
+
+                            <p>
+                                CUDA ofreció la mejor mejora de rendimiento, logrando una aceleración de aproximadamente el 90% frente a la versión secuencial.
+                                OpenMP y OpenMPI también presentaron un incremento notable al paralelizar en CPU, del 81% y el 68% respectivamente.
+                            </p>
+                        </div>
+
+                        <!-- Imagen comparativa (gráfica o tabla) -->
+                        <div class="acordeon-imagen">
+                            <img src="images/OptimizacionGraph.png" alt="Comparativa de tiempos de ejecución entre OpenMP, MPI y CUDA" />
+                            <img src="images/OptimizacionGraph%.png" alt="Porcentaje de mejora en los tiempos entre OpenMP, MPI y CUDA" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="acordeon acordeon-verde">
+                <button class="acordeon-btn">Escenario y Personaje 3D con Animaciones (2024)<span class="icono">+</span></button>
+                <div class="acordeon-contenido">
+                    <div class="acordeon-flex-column">
+                        <!-- Descripción -->
+                        <div class="acordeon-texto">
+                            <p>
+                                Proyecto centrado en el desarrollo de un <strong>escenario 3D animado</strong> y un <strong>personaje completo</strong>,
+                                aplicando técnicas de modelado, rigging y animación en Autodesk 3ds Max.
+                                Ambos trabajos fueron finalmente integrados en Unity para crear una pequeña escena interactiva.
+                            </p>
+
+                            <p>
+                                En el <strong>escenario</strong> se modeló una ciudad parcialmente destruida,
+                                en la que se animó el derrumbamiento de un edificio y un comportamiento de manada para un grupo de drones que patrullaban el entorno.
+                            </p>
+
+                            <p>
+                                En el <strong>personaje</strong>, se realizó el modelado desde cero, el rigging completo y las animaciones básicas,
+                                preparándolo para su uso dentro de un motor de juego.
+                            </p>
+
+                            <p>
+                                Como parte final del trabajo, ambos elementos fueron <strong>integrados en Unity</strong>,
+                                combinando el escenario y el personaje en una misma escena jugable para mostrar la coherencia visual y técnica del conjunto.
+                            </p>
+                        </div>
+
+                        <!-- GIFs horizontales -->
+                        <div class="acordeon-imagenes">
+                            <img src="images/3D_Escenario.gif" alt="Animación del escenario 3D" />
+                            <img src="images/3D_Personaje.gif" alt="Animación Idle del personaje" />
+                            <img src="images/3D_Final.gif" alt="Proyecto implementado en Unity" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="acordeon acordeon-gris-oscuro">
+                <button class="acordeon-btn">Demo 2D en Unity (2023)<span class="icono">+</span></button>
+                <div class="acordeon-contenido">
+                    <p></p>
                 </div>
             </div>
 

@@ -171,6 +171,15 @@ footer {
         background: #3b82f6;
     }
 
+.acordeon-teal .acordeon-btn {
+    background: #0d9488; /* Teal oscuro */
+}
+
+    .acordeon-teal .acordeon-btn:hover {
+        background: #14b8a6;
+    }
+
+
 .acordeon-morado-claro .acordeon-btn {
     background: #2563eb; /* K-Means HPC */
 }
